@@ -1,0 +1,39 @@
+{
+  "name": "food-pantry-server",
+  "version": "1.0.0",
+  "description": "API for food-pantry app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "standup-db": "sudo NODE_ENV=test npx sequelize-cli db:drop && sudo NODE_ENV=test npx sequelize-cli db:create && sudo NODE_ENV=test npx sequelize-cli db:migrate && sudo NODE_ENV=test npx sequelize-cli db:seed:all",
+    "deploy-qa": "NODE_ENV=test sudo pm2 delete food-api && sudo pm2 start server.js --name food-api",
+    "test": "echo \"No Tests currently\"",
+    "dev-db": "set NODE_ENV=development&& npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "dev-start": "set NODE_ENV=development&& pm2 start server.js --name food-api --watch",
+    "dev": "npm run dev-db && nodemon server.js",
+    "git": "git add . && git commit -m",
+    "postgit": "git push"
+  },
+  "author": "Aleks Kamenev",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
