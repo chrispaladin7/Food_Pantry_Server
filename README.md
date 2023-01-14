@@ -1,3 +1,5 @@
+This is the server side of my team final Project from Pace Fall 2022, to demonstrate what we learnt over the course.
+
 # Steps to spin up the server locally
 
 1. Pull the repo to the local system.
@@ -38,3 +40,5 @@ Examples:
 ![image](https://user-images.githubusercontent.com/55215013/163691934-07a3feff-289e-4677-9ca5-073aea00fe14.png)
 ![image](https://user-images.githubusercontent.com/55215013/163691947-cd1c9e02-3f05-433d-a2fe-53e1ab703c9a.png)
 ![image](https://user-images.githubusercontent.com/55215013/163691957-ad322a30-ee04-4aaf-be50-16c12cd2a08c.png)
+
+Date: Jan 2022 - Dec 2022
